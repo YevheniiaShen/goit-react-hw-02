@@ -12,6 +12,14 @@ export const App = () => {
     bad: 0,
   };
 
+  // const [state, setState] = useState(() => {
+  //   const savedFeedback = window.localStorage.getItem("feedback");
+  //   if (savedFeedback !== null) {
+  //     return JSON.parse(savedFeedback);
+  //   }
+  //   return initState;
+  // });
+
   const [state, setState] = useState(
     () => JSON.parse(window.localStorage.getItem("feedback")) ?? initState
   );
